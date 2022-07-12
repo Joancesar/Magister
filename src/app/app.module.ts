@@ -8,11 +8,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './features/home/home.component';
 import { SharedModule } from './shared/shared/shared.module';
+import { MatriculaComponent } from './features/matricula/matricula.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    MatriculaComponent,
   ],
   imports: [
     BrowserModule,

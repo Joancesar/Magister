@@ -1,0 +1,29 @@
+.matr-container {
+    background-color: var(--dark-blue);
+    height: 100%;
+    width: 100%;
+}
+
+.matr-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    gap: 2rem;
+}
+
+
+.matr-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.matr-text {
+    width: 12rem;
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 2.5rem;
+
+}
