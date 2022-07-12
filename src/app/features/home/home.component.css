@@ -1,0 +1,20 @@
+.home-container {
+    background-color: var(--dark-blue);
+    height: 100%;
+    width: 100%;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    gap: 2rem;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 16px;
+}

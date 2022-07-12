@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #0BC6FE;
+    --primary-hover: #0d9ac5;
+    --secondary: #A9D4EA;
+    
+    --dark-blue: #0A3868;
+    --light: #FFFEFC;
+}
+
+@font-face {
+    font-family: Linotte;
+    src: url("./assets/fonts/LinotteRegular.otf");
+}
+@font-face {
+    font-family: Linotte;
+    src: url("./assets/fonts/LinotteSemiBold.otf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: Linotte;
+    src: url("./assets/fonts/LinotteBold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Linotte;
+    src: url("./assets/fonts/LinotteLight.otf");
+    font-weight: 200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: Linotte, sans-serif, Helvetica, Arial;
+}
+
+button[color="primary"] {
+    color: #ffffff;
+    background: var(--primary);
+    padding: 0.5rem 2.7rem;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 8px;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+  
+button[color="primary"]:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+button[color="primary"]:enabled:hover {
+    background: var(--primary-hover);
+    color: #ffffff;
+    cursor: pointer;
+}
