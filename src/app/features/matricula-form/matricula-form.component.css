@@ -1,0 +1,53 @@
+.matr-form-container {
+    background-color: var(--light);
+    height: 100%;
+    width: 100%;
+    color: var(--text-secondary);
+    display: flex;
+}
+
+.matr-form-sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-blue);
+    color: #fff;
+    width: 38rem;
+    padding-top: 3.5rem;
+}
+.matr-form-sidenav magister-steps {
+    margin-top: 3.2rem;
+}
+
+.matr-form-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.matr-form-content > .mat-icon-button {
+    height: 5rem;
+    width: 5rem;
+    margin: 0.2rem 0.5rem 0 0;
+    align-self: flex-end;
+}
+.matr-form-content .mat-icon {
+    width: auto;
+    font-size: 3rem;
+} 
+
+
+/* Estilos paginas */
+.matr-pag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0px 2.2rem;
+}
+.matr-pag-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px 7rem;
+    margin-top: 2rem;
+}

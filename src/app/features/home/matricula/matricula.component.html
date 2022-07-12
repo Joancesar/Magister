@@ -1,4 +1,8 @@
 <div class="matr-container">
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    
     <div class="matr-content">
         
         <magister-logo></magister-logo>
@@ -12,7 +16,7 @@
             vamos a realizar unas preguntas para darte el mejor servicio
         </div>
         
-        <button color="Primary">Comenzar</button>
+        <button color="Primary" [routerLink]="['/matricula/form/1']">Comenzar</button>
         <a [routerLink]="['/']">Volver atrás</a>
     </div>
 </div>

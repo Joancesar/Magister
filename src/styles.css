@@ -2,7 +2,9 @@
 :root {
     --primary: #0BC6FE;
     --primary-hover: #0d9ac5;
+    
     --secondary: #A9D4EA;
+    --text-secondary:#577294;
     
     --dark-blue: #0A3868;
     --light: #FFFEFC;
@@ -71,4 +73,8 @@ a {
 
 a:visited:hover, a:hover {
     color: var(--primary-hover);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
 }

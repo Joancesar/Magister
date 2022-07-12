@@ -2,6 +2,7 @@
     background-color: var(--dark-blue);
     height: 100%;
     width: 100%;
+    color: #fff;
 }
 
 .matr-content {
@@ -10,10 +11,20 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    color: white;
     gap: 2rem;
 }
 
+.matr-container > .mat-icon-button {
+    position: absolute;
+    right: 0;
+    height: 5rem;
+    width: 5rem;
+    margin: 0.2rem 0.5rem 0 0;
+}
+.matr-container .mat-icon {
+    width: auto;
+    font-size: 3rem;
+}
 
 .matr-title {
     font-size: 2rem;
