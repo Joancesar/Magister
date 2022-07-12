@@ -145,5 +145,8 @@
       }
     }
   },
-  "defaultProject": "Magister"
+  "defaultProject": "Magister",
+  "cli": {
+    "analytics": false
+  }
 }
