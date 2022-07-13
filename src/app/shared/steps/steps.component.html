@@ -1,16 +1,17 @@
 <div class="steps-container">
-    <ng-container *ngFor="let step of steps">
+    <ng-container *ngFor="let step of steps; index as i">
         <a *ngIf="step.routerLink" class="step-link"
-        [routerLink]="step.routerLink" [routerLinkActive]="'step-link-active'" >
+        [routerLink]="step.routerLink" [routerLinkActive]="'step-link-active'">
+            <span class="step-circle"></span>
+            <span class="step-name"> {{ step.label }} </span>
+        </a>
+        <a *ngIf="!step.routerLink" class="step-link">
             <span class="step-circle"></span>
             <span class="step-name"> {{ step.label }} </span>
         </a>
         <div class="step-line-container">
             <div class="step-line"></div>
         </div>
-        <a *ngIf="!step.routerLink" class="step-link">
-            <span class="step-circle"></span>
-            <span class="step-name"> {{ step.label }} </span>
-        </a>
+        
     </ng-container>
 </div>

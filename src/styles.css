@@ -40,12 +40,13 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: Linotte, sans-serif, Helvetica, Arial;
+    letter-spacing: 0.4px;
 }
 
 button[color="primary"] {
     color: #ffffff;
     background: var(--primary);
-    padding: 0.5rem 2.7rem;
+    padding: 0.5rem 2.9rem;
     transition: background-color 0.2s, color 0.2s;
     border-radius: 8px;
     border: none;

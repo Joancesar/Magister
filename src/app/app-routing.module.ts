@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
-import { MatriculaComponent } from './features/home/matricula/matricula.component';
+import { MatriculaComponent } from './features/matricula/matricula.component';
 import { MatriculaFormComponent } from './features/matricula-form/matricula-form.component';
 import { MatriculaPage1Component } from './features/matricula-form/matricula-page1/matricula-page1.component';
 import { MatriculaPage2Component } from './features/matricula-form/matricula-page2/matricula-page2.component';

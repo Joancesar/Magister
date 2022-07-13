@@ -2,7 +2,9 @@
     <div class="matr-form-sidenav">
         <magister-logo></magister-logo>
         <magister-steps [steps]="steps"></magister-steps>
-
+        <div class="matr-form-img">
+            <img [src]="images[currentIndex].src">
+        </div>
     </div>
     <div class="matr-form-content">
         <button mat-icon-button>

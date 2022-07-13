@@ -8,7 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './features/home/home.component';
 import { SharedModule } from './shared/shared.module';
-import { MatriculaComponent } from './features/home/matricula/matricula.component';
+import { MatriculaComponent } from './features/matricula/matricula.component';
 import { MatriculaFormComponent } from './features/matricula-form/matricula-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatriculaPage1Component } from './features/matricula-form/matricula-page1/matricula-page1.component';
