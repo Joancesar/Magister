@@ -6,19 +6,25 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { StepsComponent } from './steps/steps.component';
 import { RouterModule } from '@angular/router';
+import { SelectComponent } from './select/select.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LogoComponent, StepsComponent],
+  declarations: [LogoComponent, StepsComponent, SelectComponent],
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    
     MatButtonModule,
     MatIconModule
   ],
   exports: [
     LogoComponent,
     StepsComponent,
+    SelectComponent,
     
+    FormsModule,
     MatButtonModule,
     MatIconModule
   ]

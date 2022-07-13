@@ -1,0 +1,80 @@
+.select-container {
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.select-selected {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid var(--text-secondary);
+    border-radius: 6px;
+    overflow: hidden;
+    color: var(--text-secondary);
+    
+}
+.select-selected:hover {
+    cursor: pointer;
+}
+
+.select-selected input {
+    
+    min-width: 14.5rem;
+    min-height: 0.65rem;
+    padding: 0.8em 0.6rem;
+    background-color: #fff;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    appearance: none;
+    outline: 0 none;
+    outline-offset: 0;
+    cursor: inherit;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: inherit;
+}
+.select-selected input::placeholder {
+    color: inherit;
+}
+
+.select-expand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+}
+
+.select-list-hidden {
+    display: none;
+}
+
+
+/* Lista de opciones */
+.select-option-list {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 6px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+}
+.select-option-list:hover {
+    cursor: pointer;
+}
+
+
+.select-option-grouplabel {
+    font-weight: 700;
+    padding: 0.7rem 1.1rem;
+}
+
+.select-option-label {
+    padding: 0.7rem 2.1rem;
+}
+
+.select-option-label:hover {
+    background-color: rgb(241, 241, 241);
+}

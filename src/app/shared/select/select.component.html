@@ -1,0 +1,28 @@
+<div class="select-container">
+    <div class="select-selected" (click)="toggleList()">
+        <input [name]="name" [(ngModel)]="selectedOption" [readonly]="true"
+        [placeholder]="placeholder" [ngStyle]="{'opacity': selectedOption ?'1':'0.5'}"/>
+        <div class="select-expand">
+            <mat-icon>expand_more</mat-icon>
+        </div>
+    </div>
+    <div class="select-option-list" [ngClass]="{'select-list-hidden': !toggle}">
+        <ng-container *ngFor="let optGroup of optGroups">
+            <div class="select-option-group">
+                <div class="select-option-grouplabel">
+                    {{ optGroup.label }}
+                </div>
+                <div class="select-option-label" *ngFor="let option of optGroup.options"
+                (click)="selectOption(option)">
+                    {{ option.labelList }}
+                </div>
+            </div>
+        </ng-container>
+        <div class="select-option-label" *ngFor="let option of options"
+            (click)="selectOption(option)">
+                {{ option.label }}
+        </div>
+    </div>
+    
+</div>
+

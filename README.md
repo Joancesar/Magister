@@ -1,26 +1,21 @@
 # Magister
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
+Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
-## Development server
+Se recomienda la version node v14 para un correcto funcionamiento.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Dependencias
+Ejecuta `npm i` para instalar las dependencias.
 
-## Code scaffolding
+## Servidor de desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecuta `ng serve` para lanzar el dev server. Navega hasta `http://localhost:4200/`. La pagina se recargara automaticamente si haces algun cambio en los archivos.
 
-## Build
+## Compilar version de Producción
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecuta `ng build` para compilar el proyecto. Los archivos generados estan el directorio `dist/`. Usa la flag `--prod` para la build de producción.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Se copiaran estos archivos al directorio del servidor donde se quiera hacer el despliegue, redireccionando siempre al archivo index.html
 
 ## Further help
 

@@ -31,6 +31,7 @@ a.step-link .step-circle {
     height: 1.5rem;
     background-color: #fff;
     border-radius: 50%;
+    transition: all 0.4s;
 }
 
 a.step-link-active .step-circle {
@@ -40,6 +41,7 @@ a.step-link-active .step-circle {
     outline: 3.5px solid #fff;
     outline-offset: -3.5px;
     border-radius: 50%;
+    transition: all 0.4s;
 }
 
 .step-line-container {

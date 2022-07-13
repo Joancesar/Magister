@@ -3,7 +3,10 @@
         <magister-logo></magister-logo>
         <magister-steps [steps]="steps"></magister-steps>
         <div class="matr-form-img">
-            <img [src]="images[currentIndex].src">
+            <ng-container *ngFor="let img of images;index as i">
+                <img [src]="img.src" [ngClass]="{ 'hidden': i != currentIndex }">
+            </ng-container>
+            
         </div>
     </div>
     <div class="matr-form-content">
