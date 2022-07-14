@@ -20,9 +20,14 @@ export class OptionListComponent implements OnInit {
     return this._options;
   }
   
+  /** Direccion del grid de opciones */
   @Input() direction: "row" | "column" = "row";
   
-  @Input() isGrid = false;
+  /** Tamaño del boton opción */
+  @Input() optionSize = 'auto';
+  
+  /** Espacion horizontal entre opciones */
+  @Input() columnGap = '1.9rem';
   
   @Input() selectedOption;
 
@@ -35,6 +40,7 @@ export class OptionListComponent implements OnInit {
   setOption() {
     if(this.model) {
       let modelPlain = {...this.model}
+      console.log(this.options)
       for(let option of this.options) {
         if(this.shallowEqual(modelPlain, option.value)) {
           this.selectedOption = option;

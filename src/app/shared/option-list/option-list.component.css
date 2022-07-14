@@ -1,13 +1,14 @@
 .option-grid {
     display: flex;
-    gap: 1.9rem;
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
 }
 
 .option-button {
     background: transparent;
     min-width: 7rem;
     height: 2.65rem;
-    padding: 0.35rem 1.4rem;
+    padding: 0.35rem 1.1rem;
     transition: all 0.2s;
     border-radius: 8px;
     border: 1px solid var(--text-secondary);

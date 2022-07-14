@@ -1,20 +1,20 @@
 <section class="matr-pag-container">
     <div class="matr-pag-title">¿En qué te quieres especializar?</div>
-    <div class="matr1-content">
+    <div class="matr-pag-content">
         <div class="matr1-grid1">
             <div class="matr1-subgrid">
-                <div class="matr1-label">
-                    <div class="matr1-labeltitle">Rama</div>
-                    <div class="matr1-labeltext">(Selecciona una opción)</div>
+                <div class="matr-pag-label">
+                    <div class="matr-pag-label-title">Rama</div>
+                    <div class="matr-pag-label-text">(Selecciona una opción)</div>
                 </div>
                 <magister-select [name]="'rama'" [placeholder]="'Ej: Maestros - Audición y lenguaje'"
                 [optGroups]="ramas$ | async" [(model)]="formInfo.matricula.rama">
                 </magister-select>
             </div>
             <div class="matr1-subgrid">
-                <div for="rama" class="matr1-label">
-                    <div class="matr1-labeltitle">Provincia</div>
-                    <div class="matr1-labeltext">(Selecciona una opción)</div>
+                <div for="rama" class="matr-pag-label">
+                    <div class="matr-pag-label-title">Provincia</div>
+                    <div class="matr-pag-label-text">(Selecciona una opción)</div>
                 </div>
                 <magister-select [name]="'provincia'" [placeholder]="'Ej: Madrid'"
                 [options]="provincias$ | async" [(model)]="formInfo.matricula.provincia">
@@ -22,9 +22,8 @@
             </div>
         </div>
         <div class="matr1-grid2">
-            <div class="matr1-labeltitle">¿Has sido alumn@ de Magister?</div>
-            <!-- <div class="matr1-labeltext">(Selecciona una opción)</div> -->
-            <a href="javascript:void(0);" class="matr-link-arrow">
+            <div class="matr-pag-label-title">¿Has sido alumn@ de Magister?</div>
+            <a href="javascript:void(0);" class="matr-pag-link-arrow">
                 Consulta Condiciones
                 <mat-icon>arrow_forward</mat-icon>
             </a>
@@ -33,9 +32,8 @@
             </magister-option-list>
         </div>
         <div class="matr1-grid3">
-            <div class="matr1-labeltitle">Entrega de material</div>
-            <!-- <div class="matr1-labeltext">(Selecciona una opción)</div> -->
-            <a href="javascript:void(0);" class="matr-link-arrow">
+            <div class="matr-pag-label-title">Entrega de material</div>
+             <a href="javascript:void(0);" class="matr-pag-link-arrow">
                 Consulta Condiciones
                 <mat-icon>arrow_forward</mat-icon>
             </a>
@@ -43,10 +41,8 @@
             [options]="entregaMaterialOptions">
             </magister-option-list>
         </div>
-        
+        <button color="Primary" class="matr1-button" [routerLink]="['/matricula/form/2']">Siguiente</button>
+
     </div>
     
-    
-
-    <button color="Primary" class="matr1-button" [routerLink]="['/matricula/form/2']">Siguiente</button>
 </section>

@@ -1,10 +1,6 @@
 :host {
     height: 100%;
 }
-.matr1-content {
-    display: flex;
-    flex-direction: column;
-}
 
 .matr1-grid1 {
     display: flex;
@@ -19,27 +15,23 @@
     gap: 1.2rem;
 }
 
-.matr1-label {
+.matr-pag-label {
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
 }
 
-.matr1-labeltitle {
+.matr-pag-label-title {
     font-weight: 600;
 }
-.matr1-labeltext {
+.matr-pag-label-text {
     font-weight: 200;
 }
 
 .matr1-button {
     margin-bottom: 3.4rem;
     margin-top: auto;
-}
-
-
-.matr1-options {
-    
+    align-self: center;
 }
 
 

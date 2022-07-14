@@ -1,0 +1,21 @@
+.matr2-option-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.matr2-option-grid .matr-pag-label{
+    margin-bottom: 1.1rem;
+}
+
+.matr2-button {
+    align-self: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.matr2-link-back {
+    align-self: center;
+    margin-bottom: 2.7rem;
+}

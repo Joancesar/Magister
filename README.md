@@ -3,15 +3,16 @@
 Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 Se recomienda la version node v14 para un correcto funcionamiento.
+## Instrucciones
 
-## Dependencias
+#### 1º Instalar dependencias
 Ejecuta `npm i` para instalar las dependencias.
 
-## Servidor de desarrollo
+#### 2º Ejecutar servidor de desarrollo
 
 Ejecuta `ng serve` para lanzar el dev server. Navega hasta `http://localhost:4200/`. La pagina se recargara automaticamente si haces algun cambio en los archivos.
 
-## Compilar version de Producción
+#### Compilar version de Producción
 
 Ejecuta `ng build` para compilar el proyecto. Los archivos generados estan el directorio `dist/`. Usa la flag `--prod` para la build de producción.
 
