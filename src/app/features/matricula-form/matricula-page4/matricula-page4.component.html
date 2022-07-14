@@ -1,3 +1,35 @@
 <section class="matr-pag-container">
     <div class="matr-pag-title">Tus datos personales</div>
+    
+    <div class="matr-pag-content">
+        <div class="matr-pag-label">
+            <div class="matr-pag-label-title">Nombre completo</div>
+            <magister-input [(model)]="formInfo.matricula.nombre" 
+            [placeholder]="'Ej: Camila Perez Sánchez'">
+            </magister-input>
+        </div>
+        <div class="matr4-grid-info">
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">DNI - NIE</div>
+                <magister-input [(model)]="formInfo.matricula.dni" 
+                [placeholder]="'Ej: Y56748659P'">
+                </magister-input>
+            </div>
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Móvil</div>
+                <magister-input [(model)]="formInfo.matricula.movil" 
+                [placeholder]="'Ej: 654789735'">
+                </magister-input>
+            </div>
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Email</div>
+                <magister-input [(model)]="formInfo.matricula.email" 
+                [placeholder]="'Ej: camila.per.san@gmail.com'">
+                </magister-input>
+            </div>
+        </div>
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/5']"
+        (click)="test()">Siguiente</button>
+        <a class="matr-pag-link-back" [routerLink]="['/matricula/form/4']">Volver atrás</a>
+    </div>
 </section>

@@ -1,0 +1,26 @@
+:host {
+    display: inherit;
+}
+.magister-input {
+    width: 100%;
+    min-width: 12rem;
+    height: 0.65rem;
+    padding: 0.8em 0.6rem;
+    background-color: #fff;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    appearance: none;
+    outline: 0 none;
+    outline-offset: 0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 6px;
+    color: var(--text-secondary);
+}
+
+.magister-input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.45;
+}

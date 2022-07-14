@@ -1,0 +1,19 @@
+:host {
+    height: 100%;
+}
+.matr-pag-label-title {
+    margin-bottom: 1.1rem;
+}
+
+.matr4-grid-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5rem;
+    
+}
+
+.matr-pag-content {
+    margin-top: 2rem;
+}
