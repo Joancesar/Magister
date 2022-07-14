@@ -21,18 +21,32 @@
                 </magister-select>
             </div>
         </div>
-        <div class="matr1-label">
+        <div class="matr1-grid2">
             <div class="matr1-labeltitle">¿Has sido alumn@ de Magister?</div>
             <!-- <div class="matr1-labeltext">(Selecciona una opción)</div> -->
-            <a href="#" class="matr-link-arrow">
+            <a href="javascript:void(0);" class="matr-link-arrow">
                 Consulta Condiciones
                 <mat-icon>arrow_forward</mat-icon>
             </a>
+            <magister-option-list [(model)]="formInfo.matricula.haSidoAlumno" 
+            [options]="haSidoAlumnoOptions">
+            </magister-option-list>
+        </div>
+        <div class="matr1-grid3">
+            <div class="matr1-labeltitle">Entrega de material</div>
+            <!-- <div class="matr1-labeltext">(Selecciona una opción)</div> -->
+            <a href="javascript:void(0);" class="matr-link-arrow">
+                Consulta Condiciones
+                <mat-icon>arrow_forward</mat-icon>
+            </a>
+            <magister-option-list [(model)]="formInfo.matricula.entregaMaterial" 
+            [options]="entregaMaterialOptions">
+            </magister-option-list>
         </div>
         
     </div>
     
     
 
-    <button color="Primary" class="matr1-button" (click)="test()">Siguiente</button>
+    <button color="Primary" class="matr1-button" [routerLink]="['/matricula/form/2']">Siguiente</button>
 </section>

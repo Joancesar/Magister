@@ -8,9 +8,14 @@ import { StepsComponent } from './steps/steps.component';
 import { RouterModule } from '@angular/router';
 import { SelectComponent } from './select/select.component';
 import { FormsModule } from '@angular/forms';
+import { OptionListComponent } from './option-list/option-list.component';
 
 @NgModule({
-  declarations: [LogoComponent, StepsComponent, SelectComponent],
+  declarations: [
+    LogoComponent, 
+    StepsComponent, 
+    SelectComponent, 
+    OptionListComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -23,6 +28,7 @@ import { FormsModule } from '@angular/forms';
     LogoComponent,
     StepsComponent,
     SelectComponent,
+    OptionListComponent,
     
     FormsModule,
     MatButtonModule,

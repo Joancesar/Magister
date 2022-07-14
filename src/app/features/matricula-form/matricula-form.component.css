@@ -16,7 +16,7 @@
     padding-top: 2.5rem;
 }
 .matr-form-sidenav magister-steps {
-    margin-top: 3.2rem;
+    margin-top: 2.8rem;
 }
 .matr-form-sidenav .matr-form-img {
     width: 20rem;
@@ -77,5 +77,5 @@
 
 .matr-link-arrow {
     display: flex;
-    
+    width: fit-content;
 }

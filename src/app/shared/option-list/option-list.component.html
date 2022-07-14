@@ -1,0 +1,8 @@
+<div class="option-grid">
+    <button class="option-button" *ngFor="let option of options" 
+    (click)="clickOption(option)" [ngStyle]="{'flex-direction': direction}"
+    [ngClass]="{'option-buttton-selected': option.selected}">
+        {{ option.label }}
+    </button>
+</div>
+

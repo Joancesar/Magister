@@ -40,7 +40,7 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: Linotte, sans-serif, Helvetica, Arial;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
 }
 
 button[color="primary"] {

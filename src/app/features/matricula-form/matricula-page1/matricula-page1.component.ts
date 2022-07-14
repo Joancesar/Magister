@@ -20,6 +20,15 @@ export class MatriculaPage1Component implements OnInit {
   ramas$: Observable<Rama[]>;
   provincias$: Observable<Provincia[]>;
   
+  haSidoAlumnoOptions = [
+    { label: "No", value: "No"},  
+    { label: "Sí", value: "Sí"},  
+    { label: "Sí, después de 2017", value: "Sí, después de 2017" }  
+  ];
+  entregaMaterialOptions = [
+    { label: "Material mes a mes", value: "Material mes a mes"},  
+  ];
+  
   constructor(
     public formInfo: FormInfoService,
     private ramaService: RamaService,
@@ -27,6 +36,10 @@ export class MatriculaPage1Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    /*
+      Se llama al servicio de Ramas y se mapea para crear 
+      opciones objecto y asi pasarlo a nuestros componentes Select
+    */
     this.ramas$ = this.ramaService.list().pipe(
       map(ramas => this.ramasToSelect(ramas) )
     );
@@ -36,6 +49,8 @@ export class MatriculaPage1Component implements OnInit {
     );
     
   }
+  
+  
   
   ramasToSelect(ramas) {
     console.log(ramas)

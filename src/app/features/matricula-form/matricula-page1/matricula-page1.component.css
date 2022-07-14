@@ -25,10 +25,10 @@
     font-size: 1.2rem;
 }
 
-.matr1-label .matr1-labeltitle {
+.matr1-labeltitle {
     font-weight: 600;
 }
-.matr1-label .matr1-labeltext {
+.matr1-labeltext {
     font-weight: 200;
 }
 
@@ -37,3 +37,33 @@
     margin-top: auto;
 }
 
+
+.matr1-options {
+    
+}
+
+
+
+.matr1-grid2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin-bottom: 2.2rem;
+}
+
+.matr1-grid2 magister-option-list {
+    margin-top: 1.1rem;
+}
+
+
+
+.matr1-grid3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin-bottom: 2.2rem;
+}
+
+.matr1-grid3 magister-option-list{
+    margin-top: 1.1rem;
+}
