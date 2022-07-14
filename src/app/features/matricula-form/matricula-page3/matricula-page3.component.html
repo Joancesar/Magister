@@ -1,3 +1,20 @@
 <section class="matr-pag-container">
     <div class="matr-pag-title">Selecciona tú tarifa</div>
+    
+    <div class="matr-pag-content">
+        <div class="matr3-option-grid">
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Horario</div>
+                <div class="matr-pag-label-text">(Selecciona una opción)</div>
+            </div>
+            
+            <magister-option-list [(model)]="formInfo.matricula.tarifa"
+            [options]="tarifas$ | async" [direction]="'column'">
+            </magister-option-list>
+        </div>
+        
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/4']"
+        (click)="test()">Siguiente</button>
+        <a class="matr-pag-link-back" [routerLink]="['/matricula/form/2']">Volver atrás</a>
+    </div>
 </section>

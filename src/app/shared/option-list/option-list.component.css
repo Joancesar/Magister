@@ -14,7 +14,7 @@
     border: 1px solid var(--text-secondary);
     color: var(--text-secondary);
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
 }
 
 .option-button:enabled:hover {

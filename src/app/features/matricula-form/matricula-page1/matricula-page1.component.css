@@ -15,19 +15,6 @@
     gap: 1.2rem;
 }
 
-.matr-pag-label {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
-}
-
-.matr-pag-label-title {
-    font-weight: 600;
-}
-.matr-pag-label-text {
-    font-weight: 200;
-}
-
 .matr1-button {
     margin-bottom: 3.4rem;
     margin-top: auto;

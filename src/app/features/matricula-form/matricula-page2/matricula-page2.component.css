@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 2rem;
+    align-items: flex-start;
 }
 
 .matr2-option-grid .matr-pag-label{

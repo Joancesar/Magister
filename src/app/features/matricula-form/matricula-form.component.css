@@ -69,17 +69,18 @@
     padding: 0px 2rem;
 }
 .matr-pag-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 600;
     text-align: center;
     padding: 0px 6rem;
     margin-top: 1.7rem;
-    margin-bottom: 3.2rem;
+    margin-bottom: 3rem;
 }
 .matr-pag-content {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 88%;
+    height: 100%;
 }
 .matr-pag-link-arrow {
     display: flex;
@@ -89,7 +90,7 @@
 .matr-pag-label {
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .matr-pag-label-title {
     font-weight: 600;
@@ -97,3 +98,16 @@
 .matr-pag-label-text {
     font-weight: 200;
 }
+
+
+.matr-pag-button, .matr-pag-link-back {
+    align-self: center;
+}
+.matr-pag-button {
+    margin-top: auto;
+    margin-bottom: 1.2rem;
+}
+.matr-pag-content:last-child {
+    margin-bottom: 2.5rem;
+}
+ 

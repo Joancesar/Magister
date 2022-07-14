@@ -1,0 +1,14 @@
+:host {
+    height: 100%;
+}
+.matr3-option-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.matr3-option-grid .matr-pag-label{
+    margin-bottom: 1.1rem;
+}
