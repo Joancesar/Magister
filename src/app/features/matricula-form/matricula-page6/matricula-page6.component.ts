@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormInfoService } from 'src/app/services/form-info.service';
+import { MatriculaService } from 'src/app/services/matricula.service';
 
 @Component({
   selector: 'app-matricula-page6',
@@ -11,6 +13,8 @@ import { FormInfoService } from 'src/app/services/form-info.service';
 })
 export class MatriculaPage6Component implements OnInit {
   
+  loading = false;
+  
   pagoOptions = [
     { 
       label: "Tarjeta de crédito/débito (recomendado)", 
@@ -20,19 +24,36 @@ export class MatriculaPage6Component implements OnInit {
   ];
     
   recomendadoOptions = [
-    { label: "No", value: false },  
-    { label: "Sí", value: true },  
+    { label: "No", value: "No" },  
+    { label: "Sí", value: "Sí" },  
   ];
 
   constructor(
-    public formInfo: FormInfoService
+    public formInfo: FormInfoService,
+    private matriculaService: MatriculaService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
   
-  test() {
-    console.log(this.formInfo.matricula)
+  enviarFormulario() {
+    this.loading = true;
+    console.log(this.formInfo.matricula);
+    if(this.formInfo.isValid()) {
+      this.matriculaService.createOrUpdate(this.formInfo.matricula)
+      .then(() => {
+        this.loading = false;
+        this.router.navigateByUrl("/matricula/success");
+      })
+      .catch((err) => {
+        this.loading = false;
+      })
+    } else {
+      
+      this.loading = false;
+    }
+    
   }
 
 }

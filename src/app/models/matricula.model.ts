@@ -25,6 +25,6 @@ export class Matricula extends Model {
     dirProvincia: string;
     dirCodigoPostal: string;
     tipoPago: string;
-    esRecomendado: boolean;
+    esRecomendado: string;
     
 }

@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { OptionListComponent } from './option-list/option-list.component';
 import { InputComponent } from './input/input.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SendFormGuard } from './send-form.guard';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,9 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     FormsModule,
     MatButtonModule,
     MatIconModule
+  ],
+  providers: [
+    SendFormGuard
   ]
 })
 export class SharedModule { }

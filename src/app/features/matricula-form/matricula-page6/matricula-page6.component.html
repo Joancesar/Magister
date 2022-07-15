@@ -21,8 +21,15 @@
             </a>    
         </div>
         
-        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/sent']"
-        (click)="test()">Enviar</button>
+        <button color="Primary" class="matr-pag-button" (click)="enviarFormulario()">
+            Enviar
+        </button>
         <a class="matr-pag-link-back" [routerLink]="['/matricula/form/5']">Volver atrás</a>
+       
     </div>
+    
 </section>
+
+<div *ngIf="loading" class="loading-page">
+    <div class="spinner"></div>
+</div>

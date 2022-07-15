@@ -1,6 +1,7 @@
 import { AfterContentChecked, AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { FormInfoService } from 'src/app/services/form-info.service';
 
 @Component({
   selector: 'app-matricula-form',
@@ -9,7 +10,10 @@ import { filter, map } from 'rxjs/operators';
 })
 export class MatriculaFormComponent implements OnInit, OnDestroy {
 
-  constructor(private router: Router) { }
+  constructor(
+    public formInfo: FormInfoService,
+    private router: Router
+  ) { }
 
   steps = [
     { label: "¿En qué te quieres especializar?", routerLink: "/matricula/form/1" },

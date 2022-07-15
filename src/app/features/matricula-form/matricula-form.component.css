@@ -4,6 +4,7 @@
     height: 100%;
     color: var(--text-secondary);
     display: flex;
+    position: relative;
 }
 
 .matr-form-sidenav {
@@ -21,7 +22,7 @@
 }
 .matr-form-sidenav .matr-form-img {
     width: 20rem;
-    height: 14rem;
+    height: 13.5rem;
     display: flex;
     margin-top: auto;
     align-items: flex-end;
@@ -59,6 +60,16 @@
     opacity: 0;
 }
 
+.matr-error {
+    align-self: center;
+    background: #ffc7c7;
+    color: #a00000;
+    padding: 0.4rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
 
 /* Estilos comunes de paginas */
 .matr-pag-container {
@@ -73,7 +84,7 @@
     font-weight: 600;
     text-align: center;
     padding: 0px 6rem;
-    margin-top: 1.7rem;
+    margin-top: 1.6rem;
     margin-bottom: 3rem;
 }
 .matr-pag-content {
@@ -110,4 +121,5 @@
 .matr-pag-content:last-child {
     margin-bottom: 2.5rem;
 }
+
  
