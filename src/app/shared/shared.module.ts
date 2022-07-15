@@ -10,6 +10,7 @@ import { SelectComponent } from './select/select.component';
 import { FormsModule } from '@angular/forms';
 import { OptionListComponent } from './option-list/option-list.component';
 import { InputComponent } from './input/input.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { InputComponent } from './input/input.component';
     StepsComponent, 
     SelectComponent, 
     OptionListComponent, 
-    InputComponent
+    InputComponent, 
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { InputComponent } from './input/input.component';
     SelectComponent,
     OptionListComponent,
     InputComponent,
+    CheckboxComponent,
     
     FormsModule,
     MatButtonModule,

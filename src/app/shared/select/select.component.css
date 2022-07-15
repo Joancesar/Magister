@@ -59,6 +59,8 @@
     left: 0;
     right: 0;
     z-index: 1001;
+    max-height: 12rem;
+    overflow: auto;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
 }
 .select-option-list:hover {
@@ -70,8 +72,11 @@
     font-weight: 700;
     padding: 0.7rem 1.1rem;
 }
-
 .select-option-label {
+    padding: 0.7rem 1.1rem;
+}
+
+.select-option-group > .select-option-label {
     padding: 0.7rem 2.1rem;
 }
 

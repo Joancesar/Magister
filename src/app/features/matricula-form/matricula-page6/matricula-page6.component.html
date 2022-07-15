@@ -1,3 +1,28 @@
 <section class="matr-pag-container">
     <div class="matr-pag-title">Forma de pago</div>
+    
+    <div class="matr-pag-content">
+        <div class="matr-pag-label">
+            <div class="matr-pag-label-title">¿Como prefieres abonar tu primer pago?</div>
+            <magister-option-list [(model)]="formInfo.matricula.tipoPago" 
+            [options]="pagoOptions" [optionSize]="'19rem'">
+            </magister-option-list>
+            <a href="javascript:void(0);" class="matr-pag-link-arrow">
+                Detalles sobre forma de pago y proceso post pago <mat-icon>arrow_forward</mat-icon>
+            </a>    
+        </div>
+        <div class="matr-pag-label">
+            <div class="matr-pag-label-title">¿Vienes recomendado por alguien?</div>
+            <magister-option-list [(model)]="formInfo.matricula.esRecomendado" 
+            [options]="recomendadoOptions">
+            </magister-option-list>
+            <a href="javascript:void(0);" class="matr-pag-link-arrow">
+                Ver información legal<mat-icon>arrow_forward</mat-icon>
+            </a>    
+        </div>
+        
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/sent']"
+        (click)="test()">Enviar</button>
+        <a class="matr-pag-link-back" [routerLink]="['/matricula/form/5']">Volver atrás</a>
+    </div>
 </section>

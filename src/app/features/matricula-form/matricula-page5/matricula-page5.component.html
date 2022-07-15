@@ -1,3 +1,68 @@
 <section class="matr-pag-container">
     <div class="matr-pag-title">Tu dirección</div>
+    
+    <div class="matr-pag-content">
+        <div class="matr5-option-grid1">
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Comunidad de Exámen</div>
+                <div class="matr-pag-label-text">(Selecciona una opción)</div>
+            </div>
+            
+            <magister-select [(model)]="formInfo.matricula.comunidad"
+            [placeholder]="'Ej: Madrid'" [options]="comunidades$ | async">
+            </magister-select>
+        </div>
+        
+        <div class="matr5-option-grid2">
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Dirección</div>
+                
+                <magister-input [(model)]="formInfo.matricula.direccion" 
+                [placeholder]="'Ej: Calle Ramiro de Matxu, 10, 4D'">
+                </magister-input>
+            </div>
+        </div>
+        
+        <div class="matr5-option-grid3">
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Localidad</div>
+                
+                <magister-input [(model)]="formInfo.matricula.dirLocalidad" 
+                [placeholder]="'Ej: Madrid'">
+                </magister-input>
+            </div>
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Provincia</div>
+                
+                <magister-input [(model)]="formInfo.matricula.dirProvincia" 
+                [placeholder]="'Ej: Madrid'">
+                </magister-input>
+            </div>
+            <div class="matr-pag-label">
+                <div class="matr-pag-label-title">Codigo Postal</div>
+                
+                <magister-input [(model)]="formInfo.matricula.dirCodigoPostal" 
+                [placeholder]="'Ej: 28040'">
+                </magister-input>
+            </div>
+        </div>
+        <div class="matr5-checkboxes">
+            <div>
+                <magister-checkbox [id]="'informacionLegal'"></magister-checkbox>
+                <label for="informacionLegal">
+                    Acepto la <a href="javascript:void(0);">información legal</a>
+                </label>
+            </div>
+            
+            <div>
+                <magister-checkbox [id]="'proteccionDatos'"></magister-checkbox>
+                <label for="proteccionDatos">
+                    Acepto la <a href="javascript:void(0);">la protección de datos</a>
+                </label>
+            </div>
+        </div>
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/6']"
+        (click)="test()">Siguiente</button>
+        <a class="matr-pag-link-back" [routerLink]="['/matricula/form/4']">Volver atrás</a>
+    </div>
 </section>

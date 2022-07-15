@@ -1,0 +1,43 @@
+:host {
+    height: 100%;
+}   
+.matr5-option-grid1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.matr5-option-grid1 magister-select {
+    margin-top: 1.1rem;
+}
+
+magister-select {
+    width: 100%;
+}
+.matr5-option-grid2 {
+    margin-top: 3.3rem;
+}
+.matr5-option-grid3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 3.3rem;
+}
+
+magister-input {
+    margin-top: 1rem;
+}
+
+.matr5-checkboxes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    margin: 3rem 0;
+}
+
+.matr5-checkboxes > div {
+    display: flex;
+    gap: 10px;
+}

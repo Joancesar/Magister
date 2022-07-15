@@ -1,3 +1,6 @@
+:host {
+    height: 100%;
+}
 .matr2-option-grid {
     display: flex;
     flex-direction: column;

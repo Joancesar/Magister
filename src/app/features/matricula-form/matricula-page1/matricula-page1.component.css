@@ -5,7 +5,7 @@
 .matr1-grid1 {
     display: flex;
     gap: 7rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.8rem;
 }
 
 .matr1-subgrid {
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.8rem;
 }
 
 .matr1-grid2 magister-option-list {
@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.8rem;
 }
 
 .matr1-grid3 magister-option-list{
