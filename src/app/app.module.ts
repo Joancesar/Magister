@@ -17,6 +17,7 @@ import { MatriculaPage3Component } from './features/matricula-form/matricula-pag
 import { MatriculaPage4Component } from './features/matricula-form/matricula-page4/matricula-page4.component';
 import { MatriculaPage5Component } from './features/matricula-form/matricula-page5/matricula-page5.component';
 import { MatriculaPage6Component } from './features/matricula-form/matricula-page6/matricula-page6.component';
+import { MatriculaSentComponent } from './features/matricula-sent/matricula-sent.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatriculaPage6Component } from './features/matricula-form/matricula-pag
     MatriculaPage4Component,
     MatriculaPage5Component,
     MatriculaPage6Component,
+    MatriculaSentComponent,
   ],
   imports: [
     BrowserModule,

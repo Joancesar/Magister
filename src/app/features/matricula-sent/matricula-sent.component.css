@@ -1,0 +1,56 @@
+:host {
+    height: 100%;
+}
+.matr-sent-container {
+    background-color: var(--dark-blue);
+    height: 100%;
+    width: 100%;
+    color: #fff;
+}
+
+.matr-sent-container > .mat-icon-button {
+    position: absolute;
+    right: 0;
+    height: 5rem;
+    width: 5rem;
+    margin: 0.2rem 0.5rem 0 0;
+}
+.matr-sent-container .mat-icon {
+    width: auto;
+    font-size: 3rem;
+}
+
+.matr-sent-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.matr-sent-title1, .matr-sent-title2{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.matr-sent-title1 {
+    margin-top: 3rem;
+}
+.matr-sent-title2 {
+    margin-bottom: 2.4rem;
+}
+
+.matr-sent-text1, .matr-sent-text2 {
+    width: 35rem;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.3rem;
+}
+.matr-sent-text2 {
+    margin-bottom: 3rem;
+}
+
+.matr-sent-button {
+    margin-top: 2rem;
+    margin-bottom: 1.3rem;
+}
