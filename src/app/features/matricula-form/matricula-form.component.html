@@ -13,11 +13,12 @@
         <button mat-icon-button>
             <mat-icon>menu</mat-icon>
         </button>
-        <div class="matr-error" *ngIf="formInfo.error">
+        <div class="matr-error" *ngIf="formInfo.error && !formInfo.matriculaForm.valid">
             {{ formInfo.error }}
         </div>
         <form [formGroup]="formInfo.matriculaForm" 
-        (ngSubmit)="submitMatricula(formInfo.matriculaForm)">
+        (ngSubmit)="submitMatricula(formInfo.matriculaForm);"
+        [ngClass]="{'ng-submitted': formInfo.isSubmitted}">
             <router-outlet></router-outlet>
 
         </form>

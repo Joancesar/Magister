@@ -10,6 +10,11 @@
                 <magister-select formControlName="rama" [placeholder]="'Ej: Maestros - Audición y lenguaje'"
                 [optGroups]="ramas$ | async">
                 </magister-select>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.rama.errors?.required">
+                    Debes seleccionar una rama
+                </div>
             </div>
             <div class="matr1-subgrid">
                 <div for="rama" class="matr-pag-label">
@@ -19,6 +24,11 @@
                 <magister-select formControlName="provincia" [placeholder]="'Ej: Madrid'"
                 [options]="provincias$ | async">
                 </magister-select>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.provincia.errors?.required">
+                    Debes seleccionar una provincia
+                </div>
             </div>
         </div>
         <div class="matr1-grid2">
@@ -32,6 +42,11 @@
             <magister-option-list name="haSidoAlumno" formControlName="haSidoAlumno" 
             [options]="haSidoAlumnoOptions">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.haSidoAlumno.errors?.required">
+                    Debes seleccionar una opción
+            </div>
         </div>
         <div class="matr1-grid3">
             <div class="matr-pag-label">
@@ -43,6 +58,11 @@
             <magister-option-list name="entregaMaterial" formControlName="entregaMaterial" 
             [options]="entregaMaterialOptions">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.entregaMaterial.errors?.required">
+                    Debes seleccionar una opción
+            </div>
         </div>
         <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/2']">Siguiente</button>
     </div>

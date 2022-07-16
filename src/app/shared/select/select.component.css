@@ -1,3 +1,7 @@
+form.ng-submitted :host.ng-invalid .select-selected {
+    border: 1px solid #e24c4c;
+}
+
 .select-container {
     color: var(--text-secondary);
     position: relative;

@@ -2,10 +2,12 @@
     height: 100%;
 }
 .matr-pag-label:first-child {
-    margin-bottom: 3.1rem;
+    margin-bottom: 2.8rem;
 }
 magister-option-list {
-    margin-top: 1.55rem;
-    margin-bottom: 1.55rem;
+    margin-top: 1.2rem;
 }
 
+.matr-pag-label a {
+    margin-top: 1.2rem;
+}

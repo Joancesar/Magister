@@ -7,6 +7,11 @@
             <magister-option-list name="tipoPago" formControlName="tipoPago" 
             [options]="pagoOptions" [optionSize]="'19rem'">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.tipoPago.errors?.required">
+                    Debes seleccionar una opción
+            </div>
             <a href="javascript:void(0);" class="matr-pag-link-arrow">
                 Detalles sobre forma de pago y proceso post pago <mat-icon>arrow_forward</mat-icon>
             </a>    
@@ -16,6 +21,11 @@
             <magister-option-list name="esRecomendado" formControlName="esRecomendado"
             [options]="recomendadoOptions">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.esRecomendado.errors?.required">
+                    Debes seleccionar una opción
+            </div>
             <a href="javascript:void(0);" class="matr-pag-link-arrow">
                 Ver información legal<mat-icon>arrow_forward</mat-icon>
             </a>    

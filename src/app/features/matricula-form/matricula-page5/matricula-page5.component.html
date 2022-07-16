@@ -11,6 +11,11 @@
             <magister-select formControlName="comunidad"
             [placeholder]="'Ej: Madrid'" [options]="comunidades$ | async">
             </magister-select>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.comunidad.errors?.required">
+                    Debes seleccionar una comunidad
+            </div>
         </div>
         
         <div class="matr5-option-grid2">
@@ -20,6 +25,11 @@
                 <magister-input formControlName="direccion" 
                 [placeholder]="'Ej: Calle Ramiro de Matxu, 10, 4D'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.direccion.errors?.required">
+                    El campo dirección es obligatorio
+                </div>
             </div>
         </div>
         
@@ -30,6 +40,11 @@
                 <magister-input formControlName="dirLocalidad" 
                 [placeholder]="'Ej: Madrid'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.dirLocalidad.errors?.required">
+                    El campo localidad es obligatorio
+                </div>
             </div>
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Provincia</div>
@@ -37,13 +52,23 @@
                 <magister-input formControlName="dirProvincia" 
                 [placeholder]="'Ej: Madrid'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.dirProvincia.errors?.required">
+                    El campo provincia es obligatorio
+                </div>
             </div>
             <div class="matr-pag-label">
-                <div class="matr-pag-label-title">Codigo Postal</div>
+                <div class="matr-pag-label-title">Código Postal</div>
                 
                 <magister-input formControlName="dirCodigoPostal" 
                 [placeholder]="'Ej: 28040'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.dirCodigoPostal.errors?.required">
+                    El campo código postal es obligatorio
+                </div>
             </div>
         </div>
         <div class="matr5-checkboxes">

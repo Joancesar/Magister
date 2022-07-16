@@ -1,3 +1,7 @@
+form.ng-submitted :host.ng-invalid .option-button {
+    border: 1px solid #e24c4c;
+}
+
 .option-grid {
     display: flex;
     flex-wrap: wrap;

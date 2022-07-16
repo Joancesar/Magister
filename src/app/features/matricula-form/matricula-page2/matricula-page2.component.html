@@ -10,6 +10,11 @@
             <magister-option-list name="modalidad" formControlName="modalidad" 
             [options]="modalidades$ | async" [optionSize]="'20rem'" [columnGap]="'3rem'">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.modalidad.errors?.required">
+                    Debes seleccionar una opción
+            </div>
         </div>
         <div class="matr2-option-grid">
             <div class="matr-pag-label">
@@ -20,6 +25,11 @@
             <magister-option-list name="horario" formControlName="horario"
             [options]="horarios$ | async" [direction]="'column'">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.horario.errors?.required">
+                    Debes seleccionar una opción
+            </div>
         </div>
         
         <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/3']">Siguiente</button>

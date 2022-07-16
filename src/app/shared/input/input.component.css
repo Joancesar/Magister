@@ -1,6 +1,10 @@
 :host {
     display: inherit;
 }
+form.ng-submitted :host.ng-invalid .magister-input {
+    border: 1px solid #e24c4c;
+}
+
 .magister-input {
     width: 100%;
     min-width: 12rem;

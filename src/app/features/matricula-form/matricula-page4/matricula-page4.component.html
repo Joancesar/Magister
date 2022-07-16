@@ -7,6 +7,11 @@
             <magister-input formControlName="nombre" type="text"
             [placeholder]="'Ej: Camila Perez Sánchez'">
             </magister-input>
+            <div class="error-message"
+            *ngIf="formInfo?.isSubmitted 
+            && form?.controls?.nombre.errors?.required">
+                El campo nombre es obligatorio
+            </div>
         </div>
         <div class="matr4-grid-info">
             <div class="matr-pag-label">
@@ -14,18 +19,38 @@
                 <magister-input formControlName="dni" type="text"
                 [placeholder]="'Ej: Y56748659P'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.dni.errors?.required">
+                    El campo dni es obligatorio
+                </div>
             </div>
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Móvil</div>
                 <magister-input formControlName="movil" type="tel"
                 [placeholder]="'Ej: 654789735'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.movil.errors?.required">
+                    El campo móvil es obligatorio
+                </div>
             </div>
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Email</div>
                 <magister-input formControlName="email" type="email"
                 [placeholder]="'Ej: camila.per.san@gmail.com'">
                 </magister-input>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.email.errors?.required">
+                    El campo email es obligatorio
+                </div>
+                <div class="error-message"
+                *ngIf="formInfo?.isSubmitted
+                && form?.controls?.email.errors?.email">
+                    Escribe un email válido
+                </div>
             </div>
         </div>
         <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/5']"

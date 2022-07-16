@@ -7,20 +7,14 @@
     gap: 7rem;
     margin-bottom: 2.8rem;
 }
-
 .matr1-subgrid {
     display: flex;
     flex-direction: column;
     width: 18rem;
-    gap: 1.2rem;
 }
-
-.matr1-button {
-    margin-bottom: 3.4rem;
-    margin-top: auto;
-    align-self: center;
+.matr1-subgrid magister-select {
+    margin-top: 1.2rem;
 }
-
 
 
 .matr1-grid2 {
@@ -29,11 +23,9 @@
     font-size: 1.2rem;
     margin-bottom: 2.8rem;
 }
-
 .matr1-grid2 magister-option-list {
     margin-top: 1.1rem;
 }
-
 
 
 .matr1-grid3 {
@@ -42,7 +34,13 @@
     font-size: 1.2rem;
     margin-bottom: 2.8rem;
 }
-
 .matr1-grid3 magister-option-list{
     margin-top: 1.1rem;
+}
+
+
+.matr1-button {
+    margin-bottom: 3.4rem;
+    margin-top: auto;
+    align-self: center;
 }

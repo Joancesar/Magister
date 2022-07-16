@@ -17,7 +17,7 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
     private router: Router,
     private matriculaService: MatriculaService,
   ) { }
-  
+  submitted = false;
   loading = false;
 
   steps = [
@@ -53,6 +53,7 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
   
   submitMatricula(matriculaForm) {
     console.log(matriculaForm);
+    this.formInfo.isSubmitted = true;
     let value = matriculaForm.value;
     
     let matricula = <Matricula> { 

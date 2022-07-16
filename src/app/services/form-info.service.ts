@@ -10,52 +10,52 @@ export class FormInfoService {
   
   public error;
   
+  public isSubmitted = false;
+  
   matriculaForm = this.fb.group({
     pagina1: this.fb.group({
-      rama: ["Secundaria - Biología y Geología", [Validators.required]],
-      provincia: ["Almería", [Validators.required]],
-      haSidoAlumno: ["Sí", [Validators.required]],
-      entregaMaterial: ["Material mes a mes", [Validators.required]],
+      rama: ["", [Validators.required]],
+      provincia: ["", [Validators.required]],
+      haSidoAlumno: ["", [Validators.required]],
+      entregaMaterial: ["", [Validators.required]],
     }),
     pagina2: this.fb.group({
-      modalidad: ["Semipresencial 2020/2021", [Validators.required]],
+      modalidad: ["", [Validators.required]],
       horario: [
-        "1 Clase al mes Prácticos y Programación martes por mañana. Grupo 1 de 10 a 14 horas", 
+        "", 
         [Validators.required]
       ],
     }),
     pagina3: this.fb.group({
       tarifa: [
-        "Inicio febrero 2021. Nuevo alumno SEMIPRESENCIAL - Material mes a mes - Matrícula 101.00 euros",
+        "",
         [Validators.required]
       ],
     }),
     pagina4: this.fb.group({
-      nombre: ["Joan César García leon", [Validators.required]],
-      dni: ['06641181T', [Validators.required]],
-      movil: ['692345763', [Validators.required]],
-      email: ['joancesar@hotmail.com', [Validators.required]],
+      nombre: ["", [Validators.required]],
+      dni: ['', [Validators.required]],
+      movil: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
     }),
     pagina5: this.fb.group({
-      comunidad: ["Castilla y León", [Validators.required]],
-      direccion: ['Calle Lago Salado 18', [Validators.required]],
-      dirLocalidad: ['Madrid', [Validators.required]],
-      dirProvincia: ['Madrid', [Validators.required]],
-      dirCodigoPostal: ["28017", [Validators.required]],
+      comunidad: ["", [Validators.required]],
+      direccion: ['', [Validators.required]],
+      dirLocalidad: ['', [Validators.required]],
+      dirProvincia: ['', [Validators.required]],
+      dirCodigoPostal: ["", [Validators.required]],
     }),
     pagina6: this.fb.group({
-      tipoPago: ["Tarjeta de crédito/débito (recomendado)", [Validators.required]],
-      esRecomendado: ["No", [Validators.required]],
+      tipoPago: ["", [Validators.required]],
+      esRecomendado: ["", [Validators.required]],
     }),
   });
   constructor(private fb: FormBuilder) { 
   }
   
   isValid() {
-    console.log("AQUI PASA")
     if(!this.matriculaForm.valid) {
-      this.error = "Uno o mas campos tienen algun error, por favor revísalo"
-      console.log(this.matriculaForm.controls)
+      this.error = "Uno o más campos tienen algún error, por favor revíselo"
       return false;
     }
     this.error = ""
@@ -63,6 +63,7 @@ export class FormInfoService {
   }
   
   resetForm() {
+    this.isSubmitted = false;
     this.matriculaForm.reset();
   }
   

@@ -11,6 +11,11 @@
             <magister-option-list name="tarifa" formControlName="tarifa"
             [options]="tarifas$ | async" [direction]="'column'">
             </magister-option-list>
+            <div class="error-message"
+                *ngIf="formInfo?.isSubmitted 
+                && form?.controls?.tarifa.errors?.required">
+                    Debes seleccionar una tarifa
+            </div>
         </div>
         
         <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/4']"
