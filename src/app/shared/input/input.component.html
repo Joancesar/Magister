@@ -1,2 +1,3 @@
-<input class="magister-input" [name]="name" [(ngModel)]="model"
-(ngModelChange)="modelChange.emit(model)" [placeholder]="placeholder"/>
+<input class="magister-input" [type]="type" [value]="value"
+(input)="onChange($event.srcElement.value)" (blur)="onTouched()" 
+[placeholder]="placeholder"/>

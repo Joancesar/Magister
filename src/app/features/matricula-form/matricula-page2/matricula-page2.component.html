@@ -1,4 +1,4 @@
-<section class="matr-pag-container">
+<section class="matr-pag-container" [formGroup]="form">
     <div class="matr-pag-title">Elige el horario y modalidad que más te acomode</div>
     <div class="matr-pag-content">
         <div class="matr2-option-grid">
@@ -7,7 +7,7 @@
                 <div class="matr-pag-label-text">(Selecciona una opción)</div>
             </div>
             
-            <magister-option-list [(model)]="formInfo.matricula.modalidad"
+            <magister-option-list name="modalidad" formControlName="modalidad" 
             [options]="modalidades$ | async" [optionSize]="'20rem'" [columnGap]="'3rem'">
             </magister-option-list>
         </div>
@@ -17,13 +17,12 @@
                 <div class="matr-pag-label-text">(Selecciona una opción)</div>
             </div>
             
-            <magister-option-list [(model)]="formInfo.matricula.horario"
+            <magister-option-list name="horario" formControlName="horario"
             [options]="horarios$ | async" [direction]="'column'">
             </magister-option-list>
         </div>
         
-        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/3']"
-        (click)="test()">Siguiente</button>
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/3']">Siguiente</button>
         <a class="matr-pag-link-back" [routerLink]="['/matricula/form/1']">Volver atrás</a>
     </div>
     

@@ -80,6 +80,11 @@
     padding: 0.7rem 2.1rem;
 }
 
-.select-option-label:hover {
+.select-option-label:hover:not(.select-selected-list) {
     background-color: rgb(241, 241, 241);
+}
+
+.select-selected-list {
+    background-color: var(--secondary);
+    color: var(--dark-blue);
 }

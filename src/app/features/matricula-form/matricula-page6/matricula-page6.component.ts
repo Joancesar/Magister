@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormInfoService } from 'src/app/services/form-info.service';
 import { MatriculaService } from 'src/app/services/matricula.service';
@@ -13,7 +14,6 @@ import { MatriculaService } from 'src/app/services/matricula.service';
 })
 export class MatriculaPage6Component implements OnInit {
   
-  loading = false;
   
   pagoOptions = [
     { 
@@ -27,33 +27,17 @@ export class MatriculaPage6Component implements OnInit {
     { label: "No", value: "No" },  
     { label: "Sí", value: "Sí" },  
   ];
+  
+  form!: FormGroup;
 
   constructor(
     public formInfo: FormInfoService,
-    private matriculaService: MatriculaService,
-    private router: Router
+    private rootFormGroup: FormGroupDirective
   ) { }
 
   ngOnInit(): void {
+    this.form = this.rootFormGroup.control.get("pagina6") as FormGroup;
   }
-  
-  enviarFormulario() {
-    this.loading = true;
-    console.log(this.formInfo.matricula);
-    if(this.formInfo.isValid()) {
-      this.matriculaService.createOrUpdate(this.formInfo.matricula)
-      .then(() => {
-        this.loading = false;
-        this.router.navigateByUrl("/matricula/success");
-      })
-      .catch((err) => {
-        this.loading = false;
-      })
-    } else {
-      
-      this.loading = false;
-    }
-    
-  }
+
 
 }

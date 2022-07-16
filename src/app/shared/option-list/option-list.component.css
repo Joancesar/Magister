@@ -5,30 +5,32 @@
 }
 
 .option-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
-    min-width: 7rem;
-    height: 2.65rem;
-    padding: 0.35rem 1.1rem;
+    min-width: 5rem;
+    height: 2rem;
+    padding: 0.3rem 1rem;
     transition: all 0.2s;
     border-radius: 8px;
     border: 1px solid var(--text-secondary);
     color: var(--text-secondary);
     font-family: inherit;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
 }
 
-.option-button:enabled:hover {
+.option-button:hover {
     background: #e6e6e6;
     cursor: pointer;
 }
 
-.option-buttton-selected {
+input[type="radio"]:checked + .option-button {
     border: none;
     background: var(--secondary);
     color: var(--dark-blue);
 }
-.option-button.option-buttton-selected:hover {
-    border: none;
-    background: var(--secondary);
-    color: var(--dark-blue);
+
+input[type="radio"] {
+    display: none;
 }

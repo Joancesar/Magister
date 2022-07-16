@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { StepsComponent } from './steps/steps.component';
 import { RouterModule } from '@angular/router';
 import { SelectComponent } from './select/select.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OptionListComponent } from './option-list/option-list.component';
 import { InputComponent } from './input/input.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
@@ -25,7 +25,7 @@ import { SendFormGuard } from './send-form.guard';
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule,
+    ReactiveFormsModule,
     
     MatButtonModule,
     MatIconModule
@@ -38,7 +38,7 @@ import { SendFormGuard } from './send-form.guard';
     InputComponent,
     CheckboxComponent,
     
-    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatIconModule
   ],

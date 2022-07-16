@@ -1,4 +1,4 @@
-<section class="matr-pag-container">
+<section class="matr-pag-container" [formGroup]="form">
     <div class="matr-pag-title">Selecciona tú tarifa</div>
     
     <div class="matr-pag-content">
@@ -8,7 +8,7 @@
                 <div class="matr-pag-label-text">(Selecciona una opción)</div>
             </div>
             
-            <magister-option-list [(model)]="formInfo.matricula.tarifa"
+            <magister-option-list name="tarifa" formControlName="tarifa"
             [options]="tarifas$ | async" [direction]="'column'">
             </magister-option-list>
         </div>

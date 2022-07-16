@@ -16,14 +16,14 @@ magister-select {
     width: 100%;
 }
 .matr5-option-grid2 {
-    margin-top: 3.3rem;
+    margin-top: 2.7rem;
 }
 .matr5-option-grid3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 3.3rem;
+    margin-top: 2.7rem;
 }
 
 magister-input {

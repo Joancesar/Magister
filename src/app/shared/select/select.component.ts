@@ -1,28 +1,33 @@
-import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { Model } from 'src/app/models/model';
 import { Rama } from 'src/app/models/rama.model';
 
 @Component({
   selector: 'magister-select',
   templateUrl: './select.component.html',
-  styleUrls: ['./select.component.css']
+  styleUrls: ['./select.component.css'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: forwardRef(() => SelectComponent),
+    },
+  ],
 })
-export class SelectComponent implements OnInit {
+export class SelectComponent implements OnInit, ControlValueAccessor {
   
-  @Input() name;
+  value;
+  valueLabel = "";
   @Input() placeholder = "";
   
-  @Input() model: any = null;
-  @Output() modelChange = new EventEmitter<any>();
-
-  @Input() selectedOption: any = null;
-
+  onTouched: () => void;
+  onChange: (value) => void = () => {};
   
   _optGroups = [];
   @Input()
   set optGroups(groups: any[]) {
     this._optGroups = groups;
-    this.setSelectedLabel();
   }
   get optGroups() {
     return this._optGroups;
@@ -32,7 +37,6 @@ export class SelectComponent implements OnInit {
   @Input()
   set options(options: any[]) {
     this._options = options;
-    this.setSelectedLabel();
   }
   get options() {
     return this._options;
@@ -43,51 +47,31 @@ export class SelectComponent implements OnInit {
   ngOnInit(): void {    
   }
   
+  //Comunicamos el valor desde dentro
+  registerOnChange(angularProvidedFunction) {
+    this.onChange = angularProvidedFunction;
+  }
+  //Comunicamos onTouch
+  registerOnTouched(angularProvidedFunction) {
+    this.onTouched = angularProvidedFunction;
+  }
+  //Nos comunican el valor desde fuera
+  writeValue(angularProvidedValue) {
+    this.valueLabel = angularProvidedValue;
+    this.value = angularProvidedValue;
+  }
+  
   
   selectOption(option) {
-    this.selectedOption = option.labelSelected || option.label;
-    this.model = option.value;    
-    this.modelChange.emit(this.model);
+    this.valueLabel = option.labelSelected || option.label;
+    this.value = option.value;
+    this.onChange(this.value);
     this.toggleList();
-    console.log(option)
-  }
-  
-  setSelectedLabel() {
-    if(this.model) {
-      let modelPlain = {...this.model}
-      for(let optGroup of this.optGroups) {
-        for(let option of optGroup.options) {
-          if(this.shallowEqual(modelPlain, option.value)) {
-            this.selectedOption = option.labelSelected;
-            return;
-          }
-        }
-      }
-      for(let option of this.options) {
-        if(this.shallowEqual(modelPlain, option.value)) {
-          this.selectedOption = option.label;
-          return;
-        }
-      }
-    }
-  }
-  
-  shallowEqual(obj1, obj2) {
-    const keys1 = Object.keys(obj1);
-    const keys2 = Object.keys(obj2);
-    if (keys1.length !== keys2.length) {
-      return false;
-    }
-    for (let key of keys1) {
-      if (obj1[key] !== obj2[key]) {
-        return false;
-      }
-    }
-    return true;
   }
   
   toggle = false;
   toggleList() {
+    this.onTouched();
     this.toggle = !this.toggle
   }
   

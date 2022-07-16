@@ -1,7 +1,7 @@
 <div class="select-container">
     <div class="select-selected" (click)="toggleList()">
-        <input [name]="name" [(ngModel)]="selectedOption" [readonly]="true"
-        [placeholder]="placeholder" [ngStyle]="{'opacity': selectedOption ?'1':'0.5'}"/>
+        <input [value]="valueLabel" [readonly]="true"
+        [placeholder]="placeholder" [ngStyle]="{'opacity': value ?'1':'0.5'}"/>
         <div class="select-expand">
             <mat-icon>expand_more</mat-icon>
         </div>
@@ -12,14 +12,14 @@
                 <div class="select-option-grouplabel">
                     {{ optGroup.label }}
                 </div>
-                <div class="select-option-label" *ngFor="let option of optGroup.options"
-                (click)="selectOption(option)">
+                <div *ngFor="let option of optGroup.options" class="select-option-label" 
+                [ngClass]="{'select-selected-list': option.value == value }" (click)="selectOption(option)">
                     {{ option.labelList }}
                 </div>
             </div>
         </ng-container>
-        <div class="select-option-label" *ngFor="let option of options"
-            (click)="selectOption(option)">
+        <div *ngFor="let option of options" class="select-option-label" 
+        [ngClass]="{'select-selected-list': option.value == value }" (click)="selectOption(option)">
                 {{ option.label }}
         </div>
     </div>

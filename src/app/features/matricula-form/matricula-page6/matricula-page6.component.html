@@ -1,10 +1,10 @@
-<section class="matr-pag-container">
+<section class="matr-pag-container" [formGroup]="form">
     <div class="matr-pag-title">Forma de pago</div>
     
     <div class="matr-pag-content">
         <div class="matr-pag-label">
             <div class="matr-pag-label-title">¿Como prefieres abonar tu primer pago?</div>
-            <magister-option-list [(model)]="formInfo.matricula.tipoPago" 
+            <magister-option-list name="tipoPago" formControlName="tipoPago" 
             [options]="pagoOptions" [optionSize]="'19rem'">
             </magister-option-list>
             <a href="javascript:void(0);" class="matr-pag-link-arrow">
@@ -13,7 +13,7 @@
         </div>
         <div class="matr-pag-label">
             <div class="matr-pag-label-title">¿Vienes recomendado por alguien?</div>
-            <magister-option-list [(model)]="formInfo.matricula.esRecomendado" 
+            <magister-option-list name="esRecomendado" formControlName="esRecomendado"
             [options]="recomendadoOptions">
             </magister-option-list>
             <a href="javascript:void(0);" class="matr-pag-link-arrow">
@@ -21,7 +21,7 @@
             </a>    
         </div>
         
-        <button color="Primary" class="matr-pag-button" (click)="enviarFormulario()">
+        <button color="Primary" class="matr-pag-button" type="submit">
             Enviar
         </button>
         <a class="matr-pag-link-back" [routerLink]="['/matricula/form/5']">Volver atrás</a>
@@ -30,6 +30,3 @@
     
 </section>
 
-<div *ngIf="loading" class="loading-page">
-    <div class="spinner"></div>
-</div>

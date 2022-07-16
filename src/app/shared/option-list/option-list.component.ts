@@ -1,24 +1,35 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'magister-option-list',
   templateUrl: './option-list.component.html',
-  styleUrls: ['./option-list.component.css']
+  styleUrls: ['./option-list.component.css'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: forwardRef(() => OptionListComponent),
+    },
+  ],
 })
-export class OptionListComponent implements OnInit {
+export class OptionListComponent implements OnInit, ControlValueAccessor {
   
-  @Input() model;
-  @Output() modelChange = new EventEmitter<any>();
-
+  value;
+  
+  @Input() name = "option"
+  
   _options = [];
   @Input()
   set options(options: any[]) {
     this._options = options;
-    this.setOption();
   }
   get options() {
     return this._options;
   }
+  
+  onTouched: () => void;
+  onChange: (value) => void = () => {};
   
   /** Direccion del grid de opciones */
   @Input() direction: "row" | "column" = "row";
@@ -32,54 +43,27 @@ export class OptionListComponent implements OnInit {
   @Input() selectedOption;
 
   constructor() { }
+  
+  //Comunicamos el valor desde dentro
+  registerOnChange(angularProvidedFunction) {
+    this.onChange = angularProvidedFunction;
+  }
+  //Comunicamos onTouch
+  registerOnTouched(angularProvidedFunction) {
+    this.onTouched = angularProvidedFunction;
+  }
+  //Nos comunican el valor desde fuera
+  writeValue(angularProvidedValue) {
+    this.value = angularProvidedValue;
+  }
 
   ngOnInit(): void {
-    
   }
   
-  setOption() {
-    if(this.model) {
-      let modelPlain = {...this.model}
-      console.log(this.options)
-      for(let option of this.options) {
-        if(this.shallowEqual(modelPlain, option.value)) {
-          this.selectedOption = option;
-          option.selected = true;
-          return;
-        }
-      }
-    }
+  selectOption(option) {
+    this.value = option.value;
+    this.onChange(this.value);
+    this.onTouched();
   }
   
-  clickOption(option) {
-    
-    this.selectedOption = option;
-    
-    if(this.selectedOption.selected && option.value == option.value) {
-      this.selectedOption.selected = false;
-      this.model = null;
-    } else {
-      for(let opt of this.options) {
-        opt.selected = false;
-      }
-      this.selectedOption.selected = true;
-      this.model = option.value;
-    }
-    this.modelChange.emit(this.model);
-
-  }
-
-  shallowEqual(obj1, obj2) {
-    const keys1 = Object.keys(obj1);
-    const keys2 = Object.keys(obj2);
-    if (keys1.length !== keys2.length) {
-      return false;
-    }
-    for (let key of keys1) {
-      if (obj1[key] !== obj2[key]) {
-        return false;
-      }
-    }
-    return true;
-  }
 }

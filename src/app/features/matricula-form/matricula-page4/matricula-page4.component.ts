@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { FormInfoService } from 'src/app/services/form-info.service';
 
 @Component({
@@ -10,16 +11,21 @@ import { FormInfoService } from 'src/app/services/form-info.service';
   ]
 })
 export class MatriculaPage4Component implements OnInit {
+  
+  form!: FormGroup;
 
   constructor(
-    public formInfo: FormInfoService
+    public formInfo: FormInfoService,
+    private rootFormGroup: FormGroupDirective
   ) { }
 
   ngOnInit(): void {
+    this.form = this.rootFormGroup.control.get("pagina4") as FormGroup;
+
   }
 
   
   test() {
-    console.log(this.formInfo.matricula)
+    
   }
 }

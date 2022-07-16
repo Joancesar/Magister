@@ -1,7 +1,9 @@
 import { AfterContentChecked, AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+import { Matricula } from 'src/app/models/matricula.model';
 import { FormInfoService } from 'src/app/services/form-info.service';
+import { MatriculaService } from 'src/app/services/matricula.service';
 
 @Component({
   selector: 'app-matricula-form',
@@ -12,8 +14,11 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
 
   constructor(
     public formInfo: FormInfoService,
-    private router: Router
+    private router: Router,
+    private matriculaService: MatriculaService,
   ) { }
+  
+  loading = false;
 
   steps = [
     { label: "¿En qué te quieres especializar?", routerLink: "/matricula/form/1" },
@@ -46,6 +51,41 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
   }
   
+  submitMatricula(matriculaForm) {
+    console.log(matriculaForm);
+    let value = matriculaForm.value;
+    
+    let matricula = <Matricula> { 
+      ...value.pagina1, ...value.pagina2,
+      ...value.pagina3, ...value.pagina4, 
+      ...value.pagina5, ...value.pagina6 
+    } as Matricula;
+    
+    console.log(matricula);
+    
+    this.loading = true;
+    
+    if(this.formInfo.isValid()) {
+      this.matriculaService.createOrUpdate(matricula)
+      .then(() => {
+        this.loading = false;
+        this.router.navigateByUrl("/matricula/success");
+      })
+      .catch((err) => {
+        this.loading = false;
+        console.log(err)
+      })
+    } else {
+      this.loading = false;
+    }
+  }
+  
+  /**
+   * Metodo que se ejecuta cada vez que hay un cambio en
+   * la navegación y asi poder cambiar las imagenes
+   * 
+   * @param e Evento de navegación
+   */
   detectCurrentStep(e) {
     for(let step of this.steps) {
       if(e.url === step.routerLink) {

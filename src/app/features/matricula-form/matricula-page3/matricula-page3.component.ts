@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Tarifa } from 'src/app/models/tarifa.model';
@@ -16,13 +17,18 @@ import { TarifaService } from 'src/app/services/tarifa.service';
 export class MatriculaPage3Component implements OnInit {
   
   tarifas$: Observable<Tarifa[]>;
+  
+  form!: FormGroup;
 
   constructor(
     public formInfo: FormInfoService,
-    private tarifaService: TarifaService
+    private tarifaService: TarifaService,
+    private rootFormGroup: FormGroupDirective
   ) { }
 
   ngOnInit(): void {
+    this.form = this.rootFormGroup.control.get("pagina3") as FormGroup;
+
     this.tarifas$ = this.tarifaService.list().pipe(
       map(tarifas => this.tarifasToOptions(tarifas) )
     );
@@ -32,7 +38,7 @@ export class MatriculaPage3Component implements OnInit {
     for(let tarifa of tarifas) {
       let option = { 
         label: `${tarifa.nombre} - ${tarifa.material} - ${tarifa.precio}`, 
-        value: tarifa 
+        value: `${tarifa.nombre} - ${tarifa.material} - ${tarifa.precio}`
       }
       tarifasOptions.push(option);
     }
@@ -40,7 +46,7 @@ export class MatriculaPage3Component implements OnInit {
   }
 
   test() {
-    console.log(this.formInfo.matricula)
+    
   }
   
 }

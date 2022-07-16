@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Comunidad } from 'src/app/models/comunidad.model';
@@ -14,15 +15,20 @@ import { FormInfoService } from 'src/app/services/form-info.service';
   ]
 })
 export class MatriculaPage5Component implements OnInit {
-  
+
   comunidades$: Observable<Comunidad[]>;
+  
+  form!: FormGroup;
 
   constructor(
     public formInfo: FormInfoService,
-    private comunidadService: ComunidadService
+    private comunidadService: ComunidadService,
+    private rootFormGroup: FormGroupDirective
   ) { }
 
   ngOnInit(): void {
+    this.form = this.rootFormGroup.control.get("pagina5") as FormGroup;
+
     this.comunidades$ = this.comunidadService.list().pipe(
       map(comunidades => this.comunidadesToOptions(comunidades) )
     );
@@ -33,14 +39,11 @@ export class MatriculaPage5Component implements OnInit {
     for(let comunidad of comunidades) {
       let option = { 
         label: comunidad.nombre, 
-        value: comunidad 
+        value: comunidad.nombre
       }
       comunidadesOptions.push(option);
     }
     return comunidadesOptions;
   }
   
-  test() {
-    console.log(this.formInfo.matricula)
-  }
 }

@@ -1,4 +1,4 @@
-<section class="matr-pag-container">
+<section class="matr-pag-container" [formGroup]="form">
     <div class="matr-pag-title">Tu dirección</div>
     
     <div class="matr-pag-content">
@@ -8,7 +8,7 @@
                 <div class="matr-pag-label-text">(Selecciona una opción)</div>
             </div>
             
-            <magister-select [(model)]="formInfo.matricula.comunidad"
+            <magister-select formControlName="comunidad"
             [placeholder]="'Ej: Madrid'" [options]="comunidades$ | async">
             </magister-select>
         </div>
@@ -17,7 +17,7 @@
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Dirección</div>
                 
-                <magister-input [(model)]="formInfo.matricula.direccion" 
+                <magister-input formControlName="direccion" 
                 [placeholder]="'Ej: Calle Ramiro de Matxu, 10, 4D'">
                 </magister-input>
             </div>
@@ -27,21 +27,21 @@
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Localidad</div>
                 
-                <magister-input [(model)]="formInfo.matricula.dirLocalidad" 
+                <magister-input formControlName="dirLocalidad" 
                 [placeholder]="'Ej: Madrid'">
                 </magister-input>
             </div>
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Provincia</div>
                 
-                <magister-input [(model)]="formInfo.matricula.dirProvincia" 
+                <magister-input formControlName="dirProvincia" 
                 [placeholder]="'Ej: Madrid'">
                 </magister-input>
             </div>
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Codigo Postal</div>
                 
-                <magister-input [(model)]="formInfo.matricula.dirCodigoPostal" 
+                <magister-input formControlName="dirCodigoPostal" 
                 [placeholder]="'Ej: 28040'">
                 </magister-input>
             </div>
@@ -61,8 +61,7 @@
                 </label>
             </div>
         </div>
-        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/6']"
-        (click)="test()">Siguiente</button>
+        <button color="Primary" class="matr-pag-button" [routerLink]="['/matricula/form/6']">Siguiente</button>
         <a class="matr-pag-link-back" [routerLink]="['/matricula/form/4']">Volver atrás</a>
     </div>
 </section>

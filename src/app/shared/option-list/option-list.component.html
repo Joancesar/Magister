@@ -1,9 +1,11 @@
 <div class="option-grid" [ngStyle]="{'flex-direction': direction, 'column-gap': columnGap}">
-    <button class="option-button" *ngFor="let option of options" 
-    
-    (click)="clickOption(option)" [ngStyle]="{'width': optionSize }"
-    [ngClass]="{'option-buttton-selected': option.selected}">
-        {{ option.label }}
-    </button>
+    <ng-container *ngFor="let option of options">
+        <input type="radio" [id]="option.label" [name]="name" 
+        [value]="option.value" (click)="selectOption(option)" 
+        [checked]="option.value == value"/>
+        <label [for]="option.label" class="option-button" [ngStyle]="{'width': optionSize }">
+            {{ option.label }}
+        </label>
+    </ng-container>
 </div>
 

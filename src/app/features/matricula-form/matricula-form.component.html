@@ -16,7 +16,14 @@
         <div class="matr-error" *ngIf="formInfo.error">
             {{ formInfo.error }}
         </div>
-        <router-outlet></router-outlet>
+        <form [formGroup]="formInfo.matriculaForm" 
+        (ngSubmit)="submitMatricula(formInfo.matriculaForm)">
+            <router-outlet></router-outlet>
 
+        </form>
     </div>
+</div>
+
+<div *ngIf="loading" class="loading-page">
+    <div class="spinner"></div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormGroupDirective } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Provincia } from 'src/app/models/provincia.model';
@@ -29,65 +30,63 @@ export class MatriculaPage1Component implements OnInit {
     { label: "Material mes a mes", value: "Material mes a mes"},  
   ];
   
+  form!: FormGroup;
+  
   constructor(
     public formInfo: FormInfoService,
     private ramaService: RamaService,
-    private provinciaService: ProvinciaService
+    private provinciaService: ProvinciaService,
+    private rootFormGroup: FormGroupDirective
   ) { }
 
   ngOnInit(): void {
+    this.form = this.rootFormGroup.control.get("pagina1") as FormGroup;
+
     /*
       Se llama al servicio de Ramas y se mapea para crear 
       opciones objecto y asi pasarlo a nuestros componentes Select
     */
     this.ramas$ = this.ramaService.list().pipe(
-      map(ramas => this.ramasToSelect(ramas) )
+      map(ramas => this.ramasToOptions(ramas))
     );
-    
     this.provincias$ = this.provinciaService.list().pipe(
-      map(provincias => this.provinciasToSelect(provincias) )
+      map(provincias => this.provinciasToOptions(provincias))
     );
-    
   }
   
   
   
-  ramasToSelect(ramas) {
+  ramasToOptions(ramas) {
     console.log(ramas)
     let ramasGroups = []
     for(let rama of ramas)  {
       let ramaSelect = ramasGroups.find((group) => group.label === rama.familia);
       if(!ramaSelect) {
         ramaSelect = { label: rama.familia, options: [] };
-        ramaSelect.options.push(
-          { 
-            labelList: rama.rama, 
-            labelSelected: `${rama.familia} - ${rama.rama}`, 
-            value: rama 
-          })
+        ramaSelect.options.push({ 
+            labelList: rama.nombre, 
+            labelSelected: `${rama.familia} - ${rama.nombre}`, 
+            value: `${rama.familia} - ${rama.nombre}` 
+        })
         ramasGroups.push(ramaSelect);
       } else {
-        ramaSelect.options.push(
-          { 
-            labelList: rama.rama, 
-            labelSelected: `${rama.familia} - ${rama.rama}`, 
-            value: rama 
-          })
+        ramaSelect.options.push({ 
+            labelList: rama.nombre, 
+            labelSelected: `${rama.familia} - ${rama.nombre}`, 
+            value: `${rama.familia} - ${rama.nombre}`
+        })
       }
     }
     console.log(ramasGroups);
     return ramasGroups;
   }
   
-  provinciasToSelect(provincias) {
+  provinciasToOptions(provincias) {
     let provinciasGroup = [];
     for(let provincia of provincias) {
-      provinciasGroup.push({ label: provincia.nombre, value: provincia })
+      provinciasGroup.push({ label: provincia.nombre, value: provincia.nombre })
     }
     return provinciasGroup;
   }
-
-  test() {
-    console.log(this.formInfo.matricula)
-  }
+  
 }

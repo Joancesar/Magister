@@ -8,23 +8,23 @@ import { Tarifa } from "./tarifa.model";
 
 export class Matricula extends Model {
     
-    rama: Rama;
-    provincia: Provincia;
+    rama: string;
+    provincia: string;
     haSidoAlumno: string;
     entregaMaterial: string;
-    modalidad: Modalidad;
-    horario: Horario;
-    tarifa: Tarifa;
+    modalidad: string;
+    horario: string;
+    tarifa: string;
     nombre: string;
     dni: string;
     movil: string;
     email: string;
-    comunidad: Comunidad;
+    comunidad: string;
     direccion: string;
     dirLocalidad: string;
     dirProvincia: string;
     dirCodigoPostal: string;
     tipoPago: string;
     esRecomendado: string;
-    
+    dateTime: string;
 }
