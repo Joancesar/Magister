@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormInfoService } from 'src/app/services/form-info.service';
 
 @Component({
   selector: 'app-matricula-sent',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatriculaSentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formInfo: FormInfoService) { }
 
   ngOnInit(): void {
+    this.formInfo.resetForm();
   }
 
 }

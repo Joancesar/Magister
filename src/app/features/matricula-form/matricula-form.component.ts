@@ -61,6 +61,8 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
       ...value.pagina5, ...value.pagina6 
     } as Matricula;
     
+    matricula.dateTime = new Date().toString();
+    
     console.log(matricula);
     
     this.loading = true;
