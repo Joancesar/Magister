@@ -43,8 +43,8 @@ export class MatriculaPage1Component implements OnInit {
     this.form = this.rootFormGroup.control.get("pagina1") as FormGroup;
 
     /*
-      Se llama al servicio de Ramas y se mapea para crear 
-      opciones objecto y asi pasarlo a nuestros componentes Select
+      Se hace mapeo de objectos Rama a Opciones para que
+      sea compatible con nuestro componente Select
     */
     this.ramas$ = this.ramaService.list().pipe(
       map(ramas => this.ramasToOptions(ramas))
