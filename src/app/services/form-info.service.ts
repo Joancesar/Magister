@@ -21,16 +21,10 @@ export class FormInfoService {
     }),
     pagina2: this.fb.group({
       modalidad: ["", [Validators.required]],
-      horario: [
-        "", 
-        [Validators.required]
-      ],
+      horario: ["", [Validators.required]],
     }),
     pagina3: this.fb.group({
-      tarifa: [
-        "",
-        [Validators.required]
-      ],
+      tarifa: ["",[Validators.required]],
     }),
     pagina4: this.fb.group({
       nombre: ["", [Validators.required]],

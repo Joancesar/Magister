@@ -152,11 +152,20 @@ form {
 }
 .matr-pag-content:last-child {
     margin-bottom: 2rem;
-}
-
- 
+} 
 .error-message {
     color: var(--danger);
     margin-top: 0.5rem;
     font-size: 1rem;
 }
+
+/* Responsive Design proximamente... */
+/* @media (max-width: 992px) { 
+    .matr-form-container {
+        flex-direction: column;
+    }
+    
+    .matr-form-sidenav {
+        width: 100%;
+    }
+} */

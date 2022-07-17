@@ -52,7 +52,6 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
   }
   
   submitMatricula(matriculaForm) {
-    console.log(matriculaForm);
     this.formInfo.isSubmitted = true;
     let value = matriculaForm.value;
     
@@ -63,8 +62,6 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
     } as Matricula;
     
     matricula.dateTime = new Date().toString();
-    
-    console.log(matricula);
     
     this.loading = true;
     

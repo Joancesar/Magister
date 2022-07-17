@@ -41,7 +41,6 @@ export class MatriculaPage1Component implements OnInit {
 
   ngOnInit(): void {
     this.form = this.rootFormGroup.control.get("pagina1") as FormGroup;
-    console.log(this.form?.controls?.['rama']?.errors?.['required']);
 
     /*
       Se llama al servicio de Ramas y se mapea para crear 
@@ -58,7 +57,6 @@ export class MatriculaPage1Component implements OnInit {
   
   
   ramasToOptions(ramas) {
-    console.log(ramas)
     let ramasGroups = []
     for(let rama of ramas)  {
       let ramaSelect = ramasGroups.find((group) => group.label === rama.familia);
@@ -78,7 +76,6 @@ export class MatriculaPage1Component implements OnInit {
         })
       }
     }
-    console.log(ramasGroups);
     return ramasGroups;
   }
   
