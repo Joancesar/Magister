@@ -31,7 +31,8 @@ const routes: Routes = [
   { 
     path: 'matricula/success', 
     component: MatriculaSentComponent, 
-    canActivate: [SendFormGuard] },
+    canActivate: [SendFormGuard] 
+  },
 
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

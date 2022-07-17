@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormGroupDirective } from '@angular/forms';
-import { Router } from '@angular/router';
 import { FormInfoService } from 'src/app/services/form-info.service';
-import { MatriculaService } from 'src/app/services/matricula.service';
 
 @Component({
   selector: 'app-matricula-page6',

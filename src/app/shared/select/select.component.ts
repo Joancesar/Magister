@@ -1,7 +1,5 @@
-import { Component, ElementRef, EventEmitter, forwardRef, HostListener, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, forwardRef, HostListener, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Model } from 'src/app/models/model';
-import { Rama } from 'src/app/models/rama.model';
 
 @Component({
   selector: 'magister-select',
@@ -75,6 +73,7 @@ export class SelectComponent implements OnInit, ControlValueAccessor {
     this.toggle = !this.toggle
   }
   
+  /* Detectar click fuera del select */
   @HostListener('document:mousedown', ['$event'])
   onGlobalClick(event): void {
     if (!this.el.nativeElement.contains(event.target)) {

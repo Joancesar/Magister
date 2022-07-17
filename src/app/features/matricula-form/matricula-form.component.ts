@@ -1,5 +1,5 @@
-import { AfterContentChecked, AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { Matricula } from 'src/app/models/matricula.model';
 import { FormInfoService } from 'src/app/services/form-info.service';
@@ -39,7 +39,7 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
     {src: "../../assets/img/undraw_through_the_park_lxnl.svg"},
     {src: "../../assets/img/undraw_transfer_money_re_6o1h.svg"}
   ]
-  
+  //Vemos los cambios en la navegacion y cambiamos imagen
   private sub = this.router.events
   .pipe(
     filter(e => e instanceof NavigationEnd),

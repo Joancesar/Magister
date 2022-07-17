@@ -4,7 +4,10 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { Model } from "../models/model";
 import { ICrud } from "./icrud.interface";
-
+/**
+ * Clase abstracta ServiceFirebase que implementa los métodos de ICrud 
+ * para nuestro cloud Firebase
+ */
 export abstract class ServiceFirebase<T extends Model> implements ICrud<T> {
     
     ref: AngularFirestoreCollection<T>;
