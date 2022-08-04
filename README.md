@@ -2,7 +2,7 @@
 
 Este repositorio guarda un proyecto como parte de un ejercicio Front End.<br>
 El ejercicio constaba de replicar este diseño:
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/uMVh1xj"  ><a href="//imgur.com/a/uMVh1xj">Magister</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<a href="//imgur.com/a/uMVh1xj">Diseño Magister</a>
 
 Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
