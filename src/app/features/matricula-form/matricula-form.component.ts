@@ -32,12 +32,12 @@ export class MatriculaFormComponent implements OnInit, OnDestroy {
   currentIndex = 0;
 
   images = [
-    {src: "../../assets/img/undraw_reading_re_29f8.svg"},
-    {src: "../../assets/img/undraw_scrum_board_re_wk7v.svg"},
-    {src: "../../assets/img/undraw_choose_re_7d5a.svg"},
-    {src: "../../assets/img/undraw_dev_focus_re_6iwt.svg"},
-    {src: "../../assets/img/undraw_through_the_park_lxnl.svg"},
-    {src: "../../assets/img/undraw_transfer_money_re_6o1h.svg"}
+    {src: "./../../assets/img/undraw_reading_re_29f8.svg"},
+    {src: "./../../assets/img/undraw_scrum_board_re_wk7v.svg"},
+    {src: "./../../assets/img/undraw_choose_re_7d5a.svg"},
+    {src: "./../../assets/img/undraw_dev_focus_re_6iwt.svg"},
+    {src: "./../../assets/img/undraw_through_the_park_lxnl.svg"},
+    {src: "./../../assets/img/undraw_transfer_money_re_6o1h.svg"}
   ]
   //Vemos los cambios en la navegacion y cambiamos imagen
   private sub = this.router.events

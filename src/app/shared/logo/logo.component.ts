@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'magister-logo',
   template: `
   <div class="mag-logo">
-    <img src="../../assets/img/logo.png" alt="Magister Logo">
+    <img src="./../../assets/img/logo.png" alt="Magister Logo">
     <div class="mag-logo-title">Magister</div>
   </div>`,
   styles: [
