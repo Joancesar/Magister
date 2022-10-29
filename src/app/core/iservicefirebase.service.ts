@@ -47,18 +47,27 @@ export abstract class ServiceFirebase<T extends Model> implements ICrud<T> {
             obj = item.toObject();
         else
             obj = item;
+        //Update
         if (id) {
             return this.ref.doc(id).set(obj);
         }
+        //Create
         else {
+            /*  
+                Fake insert de Matriculas para poder
+                mostrarlo en github pages
+            */
+            if(this.path == 'matriculas') {
+                return Promise.resolve()
+            }
             return this.ref.add(obj)
             .then(res => {
                 obj.id = res.id; // Para guardar con el atributo id
                 this.ref.doc(res.id).set(obj);
             })
         }
-            
     }
+    
     delete(id: string): Promise<void> {
         return this.ref.doc(id).delete();
     }

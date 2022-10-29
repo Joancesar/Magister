@@ -21,11 +21,6 @@ export class MatriculaPage4Component implements OnInit {
 
   ngOnInit(): void {
     this.form = this.rootFormGroup.control.get("pagina4") as FormGroup;
-
   }
-
   
-  test() {
-    
-  }
 }
