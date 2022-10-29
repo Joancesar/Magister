@@ -56,7 +56,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/Magister/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
