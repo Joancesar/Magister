@@ -1,3 +1,3 @@
-<input class="magister-input" [type]="type" [value]="value"
+<input [id]="id" class="magister-input" [type]="type" [value]="value"
 (input)="onChange($event.srcElement.value)" (blur)="onTouched()" 
-[placeholder]="placeholder"/>
+[placeholder]="placeholder" [autocomplete]="autocomplete">

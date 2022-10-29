@@ -23,7 +23,8 @@
                 <div class="matr-pag-label-title">Dirección</div>
                 
                 <magister-input formControlName="direccion" 
-                [placeholder]="'Ej: Calle Ramiro de Matxu, 10, 4D'">
+                [placeholder]="'Ej: Calle Ramiro de Matxu, 10, 4D'"
+                [autocomplete]="'street-address'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted
@@ -38,7 +39,7 @@
                 <div class="matr-pag-label-title">Localidad</div>
                 
                 <magister-input formControlName="dirLocalidad" 
-                [placeholder]="'Ej: Madrid'">
+                [placeholder]="'Ej: Madrid'" [id]="'location'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted
@@ -50,7 +51,7 @@
                 <div class="matr-pag-label-title">Provincia</div>
                 
                 <magister-input formControlName="dirProvincia" 
-                [placeholder]="'Ej: Madrid'">
+                [placeholder]="'Ej: Madrid'" [id]="'province'" [autocomplete]="'province'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted
@@ -62,7 +63,7 @@
                 <div class="matr-pag-label-title">Código Postal</div>
                 
                 <magister-input formControlName="dirCodigoPostal" 
-                [placeholder]="'Ej: 28040'">
+                [placeholder]="'Ej: 28040'" [autocomplete]="'postal-code'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted

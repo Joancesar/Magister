@@ -5,7 +5,7 @@
         <div class="matr-pag-label">
             <div class="matr-pag-label-title">Nombre completo</div>
             <magister-input formControlName="nombre" type="text"
-            [placeholder]="'Ej: Camila Perez Sánchez'">
+            [placeholder]="'Ej: Camila Perez Sánchez'" [autocomplete]="'name'">
             </magister-input>
             <div class="error-message"
             *ngIf="formInfo?.isSubmitted 
@@ -28,7 +28,7 @@
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Móvil</div>
                 <magister-input formControlName="movil" type="tel"
-                [placeholder]="'Ej: 654789735'">
+                [placeholder]="'Ej: 654789735'" [autocomplete]="'tel'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted 
@@ -39,7 +39,7 @@
             <div class="matr-pag-label">
                 <div class="matr-pag-label-title">Email</div>
                 <magister-input formControlName="email" type="email"
-                [placeholder]="'Ej: camila.per.san@gmail.com'">
+                [placeholder]="'Ej: camila.per.san@gmail.com'" [autocomplete]="'email'">
                 </magister-input>
                 <div class="error-message"
                 *ngIf="formInfo?.isSubmitted

@@ -17,9 +17,13 @@ export class InputComponent implements OnInit, ControlValueAccessor {
    
   value;
   
-  @Input() type;
+  @Input() type = "text";
   
-  @Input() placeholder = "";  
+  @Input() id = "";
+   
+  @Input() placeholder = "";
+  
+  @Input() autocomplete = "";
   
   constructor() { }
   
