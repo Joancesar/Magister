@@ -7,9 +7,6 @@ Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebas
 
 
 
-><h3><strong><a href="https://imgur.com/a/uMVh1xj" target="_blank">Diseño Magister</a></strong></h3>
-<br>
-
 ><h3><strong><a href="https://joancesar.github.io/Magister/" target="_blank">Haz click aquí para ver la aplicación web basada en el diseño</a></strong></h3>
 
 
