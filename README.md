@@ -5,10 +5,20 @@ El enunciado de este reto nos decía que había que replicar el siguiente diseñ
 
 Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebase.google.com/docs/firestore">Firestore</a> (Un Cloud que presta Firebase) para después poder consultarlos y mostrarlos en la aplicación, algunos ejemplos de estos datos son las Provincias y Ramas de especialización.
 
-Diseño: 
-![Imgur]https://i.imgur.com/akFr9qh.jpg
+>Diseño
+![Imgur](https://i.imgur.com/akFr9qh.jpg)
+![Imgur](https://i.imgur.com/96y8G2u.jpg)
+![Imgur](https://imgur.com/PTjLeI6.jpg)
+![Imgur](https://imgur.com/2r1Vvot.jpg)
+![Imgur](https://imgur.com/V6lyHqV.jpg)
+![Imgur](https://imgur.com/yUO2TMD.jpg)
+![Imgur](https://imgur.com/V2UIFrO.jpg)
+![Imgur](https://imgur.com/nlK6F6L.jpg)
 
-<a href="https://joancesar.github.io/Magister/">Resultado Final</a>
+
+<br>
+
+><strong><a href="https://joancesar.github.io/Magister/">Haz click aquí para ver la aplicación web basada en el diseño</a></strong>
 
 
 <br><br>
