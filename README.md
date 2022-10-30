@@ -14,6 +14,7 @@ Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebas
 
 
 <br>
+
 Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 
