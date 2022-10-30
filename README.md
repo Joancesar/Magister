@@ -13,7 +13,7 @@ Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebas
 ><h3><strong><a href="https://joancesar.github.io/Magister/">Haz click aquí para ver la aplicación web basada en el diseño</a></strong></h3>
 
 
-<br><br>
+<br>
 Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 
