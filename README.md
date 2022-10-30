@@ -1,12 +1,21 @@
 # Reto Front End - Magister
 
-Este repositorio guarda un proyecto como parte de un ejercicio Front End.<br>
-El ejercicio constaba de replicar este diseño:
-<a href="//imgur.com/a/uMVh1xj">Diseño Magister</a>
+El enunciado de este reto nos decía que había que replicar el siguiente diseño:
+<a href="https://imgur.com/a/uMVh1xj">Diseño Magister</a>
 
+Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebase.google.com/docs/firestore">Firestore</a> (Un Cloud que presta Firebase) para después poder consultarlos y mostrarlos en la aplicación, algunos ejemplos de estos datos son las Provincias y Ramas de especialización.
+
+Diseño: 
+![alt text](https://imgur.com/akFr9qh)
+
+<a href="https://joancesar.github.io/Magister/">Resultado Final</a>
+
+
+<br><br>
 Este proyecto a sido generado con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
-## Instrucciones
+
+## Instalación
 Se recomienda la version node v14 para un correcto funcionamiento.
 
 #### 1º Clonar repositorio
