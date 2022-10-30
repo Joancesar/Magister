@@ -1,16 +1,16 @@
 # Reto Front End - Magister
 
 El enunciado de este reto nos decía que había que replicar el siguiente diseño:
-<a href="https://imgur.com/a/uMVh1xj">Diseño Magister</a>
+<a href="https://imgur.com/a/uMVh1xj" target="_blank">Diseño Magister</a>
 
-Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebase.google.com/docs/firestore">Firestore</a> (Un Cloud que presta Firebase) para después poder consultarlos y mostrarlos en la aplicación, algunos ejemplos de estos datos son las Provincias y Ramas de especialización.
+Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a> (Un Cloud que presta Firebase) para después poder consultarlos y mostrarlos en la aplicación, algunos ejemplos de estos datos son las Provincias y Ramas de especialización.
 
 
 
-><h3><strong><a href="https://imgur.com/a/uMVh1xj">Diseño Magister</a></strong></h3>
+><h3><strong><a href="https://imgur.com/a/uMVh1xj" target="_blank">Diseño Magister</a></strong></h3>
 <br>
 
-><h3><strong><a href="https://joancesar.github.io/Magister/">Haz click aquí para ver la aplicación web basada en el diseño</a></strong></h3>
+><h3><strong><a href="https://joancesar.github.io/Magister/" target="_blank">Haz click aquí para ver la aplicación web basada en el diseño</a></strong></h3>
 
 
 <br>
