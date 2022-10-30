@@ -1,6 +1,6 @@
 # Reto Front End - Magister
 
-El enunciado de este reto trataba sobre replicar el siguiente diseño:
+El enunciado de este reto trata de replicar el siguiente diseño:
 <a href="https://imgur.com/a/uMVh1xj" target="_blank">Diseño Magister</a>
 
 Se nos dio instrucciones para crear datos de ejemplo en <a href="https://firebase.google.com/docs/firestore" target="_blank">Firestore</a> (Un Cloud que presta Firebase) para después poder consultarlos y mostrarlos en la aplicación, algunos ejemplos de estos datos son las Provincias y Ramas de especialización.
